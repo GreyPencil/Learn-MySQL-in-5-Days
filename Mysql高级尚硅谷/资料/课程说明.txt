@@ -1,0 +1,7 @@
+
+【尚硅谷MySQL高级】
+
+
+课程说明：
+
+	MySQL 是目前最流行的关系型数据库管理系统，在 WEB 应用方面 MySQL 也是目前最好的 RDBMS 应用软件之一。随着淘宝去IOE(去除IBM小型机、Oracle数据库及EMC存储设备)化的推进，MySQL 数据库在当前的互联网应用中变得越来越重要，本教程主要讲授针对 Java 开发所需的 MySQL 高级知识，课程中会让大家快速掌握索引，如何避免索引失效，索引的优化策略，了解innodb和myisam存储引擎，熟悉MySQL锁机制，能熟练配置MySQL主从复制，熟练掌握explain、show profile、慢查询日志等日常SQL诊断和性能分析策略。
