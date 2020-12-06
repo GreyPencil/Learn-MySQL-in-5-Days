@@ -88,6 +88,8 @@ mod(a,b)   : a- a/b*b
 SELECT MOD(-10,-3); #-1
 SELECT 10%3;
 
+#rand: 获取随机数，返回0-1之间的小数
+
 #三、日期函数：
 #now 返回当前系统时间
 SELECT NOW();
@@ -127,6 +129,7 @@ WHERE `commission_pct` IS NOT NULL
 SELECT VERSION();
 SELECT DATABASE();
 SELECT USER();
+SELECT password('字符');
 
 #五、流程控制函数：
 
