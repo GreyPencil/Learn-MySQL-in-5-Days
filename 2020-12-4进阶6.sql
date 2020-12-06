@@ -163,8 +163,31 @@ SELECT e.`employee_id`, e.`last_name` 员工名字, m.`employee_id`, m.`last_nam
 FROM employees e, employees m
 WHERE e.`manager_id`=m.`employee_id`;
 
+#作业
+#查询90号部门员工的job_id和90号部门的location_id
+SELECT job_id, location_id
+FROM employees e, departments d
+WHERE e.`department_id`=d.`department_id`
+AND d.department_id=90;
+
+#选择所有有奖金的员工的 Last_name, department_name, location_id, city
+SELECT last_name, department_name, l.location_id, city
+FROM departments d, employees e, locations l
+WHERE e.`department_id`=d.`department_id`
+AND d.`location_id`=l.`location_id`
+AND e.`commission_pct` IS NOT NULL;
+
+#查询每个工种、每个部门的部门名、工种名和最低工资
+SELECT j.job_id, department_name, job_title, MIN(salary)
+FROM jobs j, employees e, departments d
+WHERE j.`job_id`=e.`job_id`
+AND e.`department_id`=d.`department_id`
+GROUP BY d.department_name,job_title;
 
 
+
+#第一天最后一节
+#The first day last part
 
 
 
