@@ -119,6 +119,50 @@ AND l.`location_id`=d.`location_id`;
 
 
 
+#二、非等值连接
+
+#案例1：查询员工的工资和工资级别
+
+/*CREATE TABLE job_grades
+(grade_level VARCHAR(3),
+lowest_sal INT,
+highest_sal int);
+
+INSERT INTO job_grades
+VALUES ('A', 1000, 2999);
+
+INSERT INTO job_grades
+VALUES ('B', 3000, 5999);
+
+INSERT INTO job_grades
+VALUES ('C', 6000, 9999);
+
+INSERT INTO job_grades
+VALUES ('D', 10000, 14999);
+
+INSERT INTO job_grades
+VALUES ('E', 15000, 24999);
+
+INSERT INTO job_grades
+VALUES ('F', 25000, 40000);
+*/
+
+SELECT * FROM job_grades;
+
+SELECT salary, grade_level
+FROM employees e, job_grades j
+WHERE salary BETWEEN j.`lowest_sal` AND j.`highest_sal`
+AND j.`grade_level`='A';
+
+SELECT * FROM employees;
+
+#三. 自连接
+
+#案例：查询员工名和上级的名称
+SELECT e.`employee_id`, e.`last_name` 员工名字, m.`employee_id`, m.`last_name` 领导名字
+FROM employees e, employees m
+WHERE e.`manager_id`=m.`employee_id`;
+
 
 
 
