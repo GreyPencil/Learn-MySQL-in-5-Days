@@ -190,8 +190,6 @@ delete VS truncate
    而truncate删除后，从0开始
 4. truncate删除没有返回值，delete 有返回值
 5. truncate删除不能回滚，delete删除可以回滚
-
-
 */
 
 
